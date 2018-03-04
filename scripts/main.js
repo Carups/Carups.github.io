@@ -1,6 +1,7 @@
 var keyBox1 = document.encode.encodeStr;
 var keyBox2 = document.decode.decodeStr;
 
+
 // обработчик изменения текста
 function onchange1(e){
     // получаем элемент printBlock
@@ -8,7 +9,7 @@ function onchange1(e){
     // получаем новое значение
     var val = e.target.value;
     // установка значения
-    printEncode.textContent = val;
+    printEncode.textContent = "Ответ: " + Module.encode(val)
 }
 
 function onchange2(e){
@@ -17,7 +18,7 @@ function onchange2(e){
     // получаем новое значение
     var val = e.target.value;
     // установка значения
-    printDecode.textContent = val;
+    printDecode.textContent = "Ответ: " + Module.decode(val)
 }
 
 keyBox1.addEventListener("change", onchange1);

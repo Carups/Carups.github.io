@@ -3,27 +3,47 @@
   <head>
     <meta charset="utf-8">
     <title>My test page</title>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+     body { margin: 0; }
+     #encodeDiv, #decodeDiv { position: absolute; }
+     #encodeDiv, #decodeDiv { overflow: auto; padding: 10px; }
+     #encodeDiv {
+      width: 200px;
+      left: 20px;
+      top: 16px; /* Расстояние от верхнего края */
+      bottom: 0; /* Расстояние снизу  */
+     }
+     #decodeDiv {
+      width: 200px;
+      top: 16px; /* Расстояние от верхнего края */
+      left: 300px; /* Расстояние от левого края */
+      bottom: 0; right: 0;
+     }
+     </style>
   </head>
   <body>
-    <h1>Шифратор/Дешифратор</h1>
+    <div id=encodeDiv>
+    <h1>Шифратор </h1>
 
     <form name="encode">
      <input type="text" name="encodeStr" placeholder="Строка для шифрования"></input>
-      <div id="printEncode"></div>
      <input type="button" name="encodeButton" value="Зашифровать" />
+
+     <div id="printEncode"> Ответ: </div>
+
     </form>
-
-
+  </div>
+  <div id = decodeDiv>
+    <h1>Дешифратор</h1>
     <form name="decode">
-     <br>
      <input type="text" name="decodeStr" placeholder="Строка для расшифрования"></input>
-     <div id="printDecode"></div>
+     <input type="button" name="decodeButton" value="Расшифровать" />
+     <div id="printDecode"> Ответ: </div>
     </form>
-      <input type="button" name="decodeButton" value="Расшифровать" />
 
 
-    <script src="scripts/main.js">
-    </script>
+    <script src="scripts/port_lib.js"></script>
+    <script src="scripts/main.js"></script>
   </body>
+ </div>
 </html>
