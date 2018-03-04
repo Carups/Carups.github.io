@@ -9,7 +9,7 @@ function onchange1(e){
     // получаем новое значение
     var val = e.target.value;
     // установка значения
-    printEncode.textContent = "Что?" 
+    
 }
 
 function onchange2(e){
